@@ -1,0 +1,95 @@
+/* Global Styles */
+body {
+  background: linear-gradient(135deg, #1e293b, #0f172a);
+  color: #f1f5f9;
+  font-family: 'Poppins', sans-serif;
+  min-height: 100vh;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Root Container */
+#root {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(8px);
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+}
+
+/* Logo */
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter, transform;
+  transition: all 0.4s ease-in-out;
+  cursor: pointer;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #60a5fa);
+  transform: scale(1.1) rotate(5deg);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #38bdf8);
+}
+
+/* Logo Spin Animation */
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+/* Card */
+.card {
+  background: rgba(255, 255, 255, 0.08);
+  padding: 2em;
+  border-radius: 12px;
+  margin: 2rem 0;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+}
+
+/* Text */
+h1, h2, h3 {
+  color: #f9fafb;
+}
+p {
+  color: #cbd5e1;
+  line-height: 1.6;
+}
+
+/* Link */
+a {
+  color: #60a5fa;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+a:hover {
+  color: #93c5fd;
+}
+
+/* Docs Note */
+.read-the-docs {
+  color: #94a3b8;
+  font-style: italic;
+  margin-top: 1rem;
+}
+
